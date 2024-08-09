@@ -46,8 +46,8 @@ import co.yml.charts.ui.linechart.model.SelectionHighlightPoint
 import co.yml.charts.ui.linechart.model.SelectionHighlightPopUp
 import co.yml.charts.ui.linechart.model.ShadowUnderLine
 import com.berakahnd.wallet.ui.screens.Sale
-import com.berakahnd.wallet.ui.screens.formatNumber
 import com.berakahnd.wallet.ui.theme.Pink80
+import com.berakahnd.wallet.util.Tools.formatNumber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -70,7 +70,7 @@ fun SaleCard(sale: Sale){
                 .padding(16.dp)
                 .fillMaxHeight(), verticalArrangement = Arrangement.Center
         ) {
-            Icon(modifier = Modifier.size(48.dp), imageVector = Icons.Default.ShowChart, contentDescription = null, tint = Pink80)
+            Icon(modifier = Modifier.size(30.dp), imageVector = Icons.Default.ShowChart, contentDescription = null, tint = Pink80)
             Spacer(modifier = Modifier.size(8.dp))
             Text(text = sale.title,fontWeight = FontWeight.Bold)
             Text(text = sale.value, color = MaterialTheme.colorScheme.onSurfaceVariant)

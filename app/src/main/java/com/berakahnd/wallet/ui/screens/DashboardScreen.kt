@@ -37,6 +37,7 @@ import com.berakahnd.wallet.ui.component.dashboard.SaleCard
 import com.berakahnd.wallet.ui.component.dashboard.TransactionDialog
 import com.berakahnd.wallet.ui.viewmodel.HomeViewModel
 import com.berakahnd.wallet.util.TRANSACTION
+import com.berakahnd.wallet.util.Tools.formatNumber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -163,11 +164,3 @@ data class Sale(
     val title : String = "BUY",
     val value : String = "+0,25 BTC"
 )
-
-fun formatNumber(number: Float): String {
-    return when {
-        number >= 1_000_000 -> String.format("%.1fM", number / 1_000_000)
-        number >= 1_000 -> String.format("%.1fK", number / 1_000)
-        else -> number.toString()
-    }
-}

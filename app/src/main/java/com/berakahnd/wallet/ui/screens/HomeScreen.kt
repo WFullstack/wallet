@@ -32,11 +32,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.berakahnd.wallet.data.local.Transaction
 import com.berakahnd.wallet.ui.component.home.ActivityTrabsaction
 import com.berakahnd.wallet.ui.component.home.ItemTransaction
 import com.berakahnd.wallet.ui.theme.WalletTheme
 import com.berakahnd.wallet.ui.viewmodel.HomeViewModel
+import com.berakahnd.wallet.util.Tools.formatNumber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -68,7 +68,6 @@ fun HomeScreen(
         }
     ) { paddingValues ->
         Column(modifier = Modifier
-            //.verticalScroll(rememberScrollState())
             .padding(paddingValues)
             .fillMaxSize(), verticalArrangement = Arrangement.spacedBy(16.dp)) {
             Column(modifier = Modifier
@@ -110,7 +109,7 @@ fun HomeScreen(
 @Composable
 fun GreetingPreview() {
     WalletTheme {
-        val transaction = Transaction(ref = "xxxxx", amount = 3000f)
+        //val transaction = Transaction(ref = "xxxxx", amount = 3000f)
         //ItemTransaction(transaction){}
         //MainScreen()
         //ActivityTrabsaction()

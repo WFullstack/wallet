@@ -35,7 +35,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.berakahnd.wallet.data.local.Transaction
-import com.berakahnd.wallet.ui.screens.formatNumber
 import com.berakahnd.wallet.ui.theme.Green
 import com.berakahnd.wallet.ui.theme.Pink80
 import com.berakahnd.wallet.ui.theme.Purple
@@ -43,6 +42,7 @@ import com.berakahnd.wallet.ui.viewmodel.HomeViewModel
 import com.berakahnd.wallet.util.TRANSACTION
 import java.text.SimpleDateFormat
 import java.util.Locale
+import com.berakahnd.wallet.util.Tools.formatNumber
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
